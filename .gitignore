@@ -61,15 +61,15 @@ release-distribution/
 vstm-distribution/
 *.zip
 
-# Live Minecraft server test runtime & execution environments
-test-server/
-run/
-server/
-cache/
-libraries/
-logs/
-world/
-world_nether/
-world_the_end/
-eula.txt
-server.properties
+# Live Minecraft server test runtime & execution environments (Root-only anchors)
+/test-server/
+/run/
+/server/
+/cache/
+/libraries/
+/logs/
+/world/
+/world_nether/
+/world_the_end/
+/eula.txt
+/server.properties
