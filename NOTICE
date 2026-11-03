@@ -1,0 +1,27 @@
+Vessel-api — Clean-Room VSTM Super-API for the VESSEL Universal Runtime
+Copyright (c) 2026 Shiroz & VESSEL Contributors. All rights reserved.
+
+================================================================================
+THIRD-PARTY SOFTWARE NOTICES & ATTRIBUTIONS
+================================================================================
+
+1. OW2 ASM (org.ow2.asm:asm, org.ow2.asm:asm-tree v9.7)
+   Copyright (c) 2000-2011 INRIA, France Telecom. All rights reserved.
+   Licensed under the BSD 3-Clause License (https://asm.ow2.io/license.html).
+
+2. Clean-Room Ecosystem Interoperability & Algorithmic Acknowledgements:
+   Vessel-api (dev.vessel.api.*) is a 100% clean-room implementation providing
+   bytecode transmutation receptors and runtime symmetry bridges for:
+   - FabricMC (fabric-loader, fabric-api — Apache-2.0)
+   - QuiltMC (quilt-loader, QSL — Apache-2.0)
+   - MinecraftForge (Forge API / EventBus — LGPL-2.1)
+   - NeoForged (NeoForge API / Bus / Attachments — LGPL-2.1)
+   - Bukkit / SpigotMC / PaperMC / Folia (Public Plugin & Region Scheduler APIs)
+   - GeyserMC & Floodgate (MIT License)
+   - Mojang Brigadier (MIT License)
+   - Community optimization concepts pioneered by PaperMC/Folia, CaffeineMC
+     (Sodium, Lithium), FerriteCore (malte0811), MemoryLeakFix (fxmorin),
+     AllTheLeaks (Uncandango), ModernFix (embeddedt), Starlight/Moonrise
+     (Spottedleaf), C2ME (ishland), and Krypton (astei).
+
+See CREDITS.md for the complete itemized attribution table.

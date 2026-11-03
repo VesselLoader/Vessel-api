@@ -1,0 +1,75 @@
+# Gradle & Build artifacts
+.gradle/
+**/.gradle/
+build/
+**/build/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE & Environment configurations
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+
+# Temporary files, Logs & Scratch
+scratch/
+trash/
+done/
+Temp/
+build-diagnostics/
+artifacts/
+*.tmp
+*.log
+
+# Sensitive environment configuration, keys & credentials
+*.local.properties
+local.properties
+gradle.local.properties
+.env
+credentials/
+.secrets/
+*.key
+*.gpg
+*.asc
+
+# Internal documentation & development changelogs
+VESSEL-docs/
+spec/
+governance/
+LOG.md
+CHANGELOG.md
+DESCRIPTION.md
+
+# Large archives & local distribution staging (Maven Central & VSTM packages)
+release-distribution/
+vstm-distribution/
+*.zip
+
+# Live Minecraft server test runtime & execution environments
+test-server/
+run/
+server/
+cache/
+libraries/
+logs/
+world/
+world_nether/
+world_the_end/
+eula.txt
+server.properties
