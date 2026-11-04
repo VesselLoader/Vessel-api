@@ -11,12 +11,13 @@ import java.util.function.Consumer;
  * Bridges Forge/NeoForge {@code @SubscribeEvent}, Bukkit/Paper {@code @EventHandler},
  * and Fabric/Quilt functional callback registrations directly into the native {@link SovereignEventBus}.
  *
- * @version 1.0.1
+ * @version 1.0.2
  */
 public final class DynamicEventSubscriptionRouter {
 
     private static final String FORGE_SUBSCRIBE_EVENT = "SubscribeEvent";
     private static final String BUKKIT_EVENT_HANDLER = "EventHandler";
+    private static final String VESSEL_SUBSCRIBE_EVENT = "VesselSubscribe";
     private static final String EVENT_SUFFIX = "Event";
 
     private static final DynamicEventSubscriptionRouter INSTANCE = new DynamicEventSubscriptionRouter(SovereignEventBus.getInstance());
@@ -39,7 +40,11 @@ public final class DynamicEventSubscriptionRouter {
                 continue;
             }
             Class<?> paramType = method.getParameterTypes()[0];
-            if (hasAnnotation(method, FORGE_SUBSCRIBE_EVENT) || hasAnnotation(method, BUKKIT_EVENT_HANDLER) || isCandidateEventType(paramType)) {
+            if (hasAnnotation(method, FORGE_SUBSCRIBE_EVENT)
+                    || hasAnnotation(method, BUKKIT_EVENT_HANDLER)
+                    || hasAnnotation(method, VESSEL_SUBSCRIBE_EVENT)
+                    || method.isAnnotationPresent(VesselSubscribe.class)
+                    || isCandidateEventType(paramType)) {
                 eventBus.register(paramType, target, method);
             }
         }

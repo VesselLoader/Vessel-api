@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 /**
  * Sovereign Event Bus engine of the VESSEL Super-API ecosystem.
  * <p>
- * Implements Chapter 3.1 & 6 specifications:
+ * Implements Chapter 3.1 and 6 specifications:
  * <ul>
  *   <li>Dense integer table mapping for zero-allocation event lookup.</li>
  *   <li>Direct monomorphic {@link MethodHandle} dispatch achieving sub-1.2 nanosecond latency.</li>
@@ -19,7 +19,7 @@ import java.util.function.Consumer;
  *   <li>Zero GC heap allocation in hot dispatch paths.</li>
  * </ul>
  *
- * @version 1.0.2
+ * @version 1.0.3
  */
 public final class SovereignEventBus {
 

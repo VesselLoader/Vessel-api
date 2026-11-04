@@ -9,10 +9,10 @@ import java.util.Objects;
  * Ultra-low latency event dispatcher utilizing direct monomorphic {@link MethodHandle} invocation.
  * <p>
  * Employs ahead-of-time type adaptation to {@code (Object)void} so that invocations can execute via
- * {@link MethodHandle#invokeExact(Object)}, allowing the HotSpot C2 JIT compiler to inline the call site
+ * {@code MethodHandle.invokeExact(Object)}, allowing the HotSpot C2 JIT compiler to inline the call site
  * into bare machine code, achieving sub-1.2 nanosecond dispatch with zero heap allocation.
  *
- * @version 1.0.0
+ * @version 1.0.1
  */
 public final class MonomorphicEventDispatcher {
 

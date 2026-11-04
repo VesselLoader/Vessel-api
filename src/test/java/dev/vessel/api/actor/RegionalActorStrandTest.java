@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
  * JUnit 5 test suite validating the Regional Actor Model Concurrency, MPSC Mailbox,
  * Timeout Guard circuit breaker, and Global Region Sync Barrier.
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author VESSEL Engine Team
  */
 public class RegionalActorStrandTest {
@@ -30,8 +30,8 @@ public class RegionalActorStrandTest {
 
     @BeforeEach
     void setUp() {
-        strandA = new RegionalActorStrand(0, 0);
-        strandB = new RegionalActorStrand(1, 1);
+        strandA = new RegionalActorStrand(0, 0, new CrossRegionAskTimeoutGuard(2000L, 5, 1000L));
+        strandB = new RegionalActorStrand(1, 1, new CrossRegionAskTimeoutGuard(2000L, 5, 1000L));
     }
 
     @AfterEach

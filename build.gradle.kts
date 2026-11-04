@@ -1,6 +1,6 @@
 // ==============================================================================
 // VESSEL-API — Build Gradle (Kotlin DSL)
-// Version: 1.0.2
+// Version: 1.0.3
 // Description: Public Developer Contracts & Universal Super-API (VUSA) for VESSEL.
 //              Interconnects bidirectionally with VESSEL Sovereign Core locally
 //              via Gradle Composite Build (includeBuild) and at runtime.
@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "dev.vessel"
-version = "1.0.0-SNAPSHOT"
+version = "1.1.0"
 description = "VESSEL Universal Super-API (VUSA) — Public Developer & Cross-Loader Symmetry Contracts"
 
 java {

@@ -18,7 +18,7 @@ import java.util.function.Supplier;
  * without locking or lock contention.
  * </p>
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author VESSEL Engine Team
  */
 public final class RegionalActorStrand implements AutoCloseable {
@@ -197,8 +197,8 @@ public final class RegionalActorStrand implements AutoCloseable {
     private void drainMailbox() {
         int drained = mailbox.drain(task -> {
             try {
-                task.run();
                 processedTaskCount.incrementAndGet();
+                task.run();
             } catch (Throwable throwable) {
                 // Keep strand alive on task failures
             }
